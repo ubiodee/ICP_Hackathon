@@ -134,7 +134,7 @@ The QuikDB CLI provides a convenient way to manage projects, databases, data gro
 
 1. **Navigate to CLI Directory**: Move into the CLI directory of the project.
     ```bash
-    cd cli/
+    cd src/cli/
     ```
 
 2. **No Need to Run `npm install`**: Dependencies are already managed by the project setup.
