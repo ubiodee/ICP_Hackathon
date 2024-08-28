@@ -16,7 +16,7 @@
 
 - **Video Title:** AI Functionality and Performance
 - **Link to Video:**  
-  [Watch AI Demo](https://#)
+  [Watch AI Demo](https://drive.google.com/file/d/1_MZbue7enibrAuRPIcxTZLN-2CkZ1FPX/view?usp=sharing)
 
 ## CLI Demo
 
