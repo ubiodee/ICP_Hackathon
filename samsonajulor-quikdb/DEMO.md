@@ -3,8 +3,8 @@
 ## Frontend Demo
 
 - **Video Title:** Frontend Functionality Demonstration
-- **Link to Video:**  
-  [Watch Frontend Demo](https://#)
+- **Link to Video:**
+  [Watch Frontend Demo](https://#);
 
 ## Backend Demo
 
