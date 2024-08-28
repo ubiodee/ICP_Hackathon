@@ -1,0 +1,249 @@
+# QuikDB Actor and CLI Documentation
+
+QuikDB is an actor designed to manage projects, databases, data groups, and items. It offers a set of functions to create, update, retrieve, and manage these entities. Additionally, QuikDB includes a Command Line Interface (CLI) tool that allows you to manage these entities from the command line.
+
+Our vision is to create a tool that integrates the flexibility of NoSql databases and the structure of Sql databases into a simple user friendly database management system
+
+This documentation is intended to help frontend developers and non-technical integrators understand how to interact with QuikDB, its functionalities, and how to use the CLI effectively.
+
+## Table of Contents
+
+1. [Overview](#overview)
+2. [Setup and Initialization](#setup-and-initialization)
+3. [Running the Project Locally](#running-the-project-locally)
+4. [Using the CLI](#using-the-cli)
+5. [Project Management](#project-management)
+    - [Creating a Project](#creating-a-project)
+    - [Updating a Project](#updating-a-project)
+    - [Retrieving All Projects](#retrieving-all-projects)
+6. [Database Management](#database-management)
+    - [Creating a Database](#creating-a-database)
+    - [Updating a Database](#updating-a-database)
+    - [Retrieving All Databases](#retrieving-all-databases)
+7. [Data Group Management](#data-group-management)
+    - [Creating a Data Group](#creating-a-data-group)
+    - [Updating a Data Group](#updating-a-data-group)
+    - [Retrieving All Data Groups](#retrieving-all-data-groups)
+8. [Item Management](#item-management)
+    - [Adding/Updating an Item](#addingupdating-an-item)
+    - [Retrieving an Item](#retrieving-an-item)
+    - [Deleting an Item](#deleting-an-item)
+    - [Listing All Keys](#listing-all-keys)
+9. [Batch Operations](#batch-operations)
+    - [Adding/Updating Multiple Items](#addingupdating-multiple-items)
+    - [Retrieving Multiple Items](#retrieving-multiple-items)
+
+## Overview
+
+QuikDB is a versatile system designed to handle different data entities such as projects, databases, data groups, and items. It supports CRUD (Create, Read, Update, Delete) operations for each entity, providing flexibility and control over data management. Additionally, the CLI tool offers a simple way to interact with these entities from the command line.
+
+## Setup and Initialization
+
+To get started with QuikDB, you'll need to set up your development environment and initialize the project. The project includes a set of npm scripts to streamline the setup process.
+
+### Project Scripts
+
+Below is a list of npm scripts available in the project:
+
+- **`build`**: Builds the project across all workspaces.
+- **`dfx:start`**: Starts the DFX replica environment and cleans any previous state.
+- **`dfx:setup`**: Sets up the canisters for the project, including `web`, `icp`, and `internet_identity`.
+- **`dfx:build`**: Builds and deploys the canisters.
+- **`prebuild`**: Prepares the project for building across all workspaces.
+- **`pretest`**: Prepares the project for testing across all workspaces.
+- **`start`**: Starts the application across all workspaces.
+- **`test`**: Runs tests across all workspaces.
+
+### Setting Up the Repository
+
+1. **Clone the Repository**: Start by cloning the repository to your local machine.
+    ```bash
+    git clone <repository-url>
+    cd app/
+    ```
+
+2. **Install Dependencies**: Install the necessary dependencies using npm.
+    ```bash
+    npm install
+    ```
+
+3. **Setup DFX Environment**: Run the DFX setup script to create the canisters.
+    ```bash
+    npm run dfx:setup
+    ```
+
+4. **Start DFX**: Start the DFX environment, which will run the Internet Computer locally.
+    ```bash
+    npm run dfx:start
+    ```
+
+5. **Build and Deploy**: Build and deploy the canisters to the local DFX environment.
+    ```bash
+    npm run dfx:build
+    ```
+
+## Running the Project Locally
+
+To run the project locally, you will use the following commands:
+
+1. **Start the Local Replica**: Run the local DFX replica environment.
+    ```bash
+    npm run dfx:start
+    ```
+
+2. **Build and Deploy**: Build the project and deploy it to the local DFX environment.
+    ```bash
+    npm run dfx:build
+    ```
+
+After running these commands, your application will be available at `http://localhost:4943?canisterId={asset_canister_id}`.
+
+### Starting the Development Server
+
+To start making frontend changes and testing locally, you can start the development server:
+
+```bash
+npm start
+```
+
+This will start a server at `http://localhost:3000` and proxy API requests to the replica at port 4943.
+
+### Note on Frontend Environment Variables
+
+When hosting frontend code without using DFX, consider the following adjustments to prevent your project from fetching the root key in production:
+
+- Set `DFX_NETWORK` to `ic` if using Webpack.
+- Use your own method to replace `process.env.DFX_NETWORK` in the autogenerated declarations.
+- Configure the `createActor` constructor as per your requirements.
+
+### URLs
+
+- **Backend Canister URL**: `http://127.0.0.1:4943/?canisterId=br5f7-7uaaa-aaaaa-qaaca-cai`
+- **Frontend Canister via Browser**:
+    - `internet_identity`: `http://127.0.0.1:4943/?canisterId=be2us-64aaa-aaaaa-qaabq-cai`
+    - `web`: `http://127.0.0.1:4943/?canisterId=bkyz2-fmaaa-aaaaa-qaaaq-cai`
+- **Backend Canister via Candid Interface**:
+    - `icp`: `http://127.0.0.1:4943/?canisterId=br5f7-7uaaa-aaaaa-qaaca-cai&id=bd3sg-teaaa-aaaaa-qaaba-cai`
+    - `internet_identity`: `http://127.0.0.1:4943/?canisterId=br5f7-7uaaa-aaaaa-qaaca-cai&id=be2us-64aaa-aaaaa-qaabq-cai`
+
+## Using the CLI
+
+The QuikDB CLI provides a convenient way to manage projects, databases, data groups, and items directly from the command line. Here's how to get started with the CLI.
+
+### CLI Setup
+
+1. **Navigate to CLI Directory**: Move into the CLI directory of the project.
+    ```bash
+    cd cli/
+    ```
+
+2. **No Need to Run `npm install`**: Dependencies are already managed by the project setup.
+
+3. **Delete Existing `node_modules` Directory**: If a `node_modules` directory exists, delete it to avoid conflicts.
+
+4. **Create a New Project**: Use the following command to create a new project.
+    ```bash
+    npx tsx src/index.ts create-project --name "My New Project" --description "Project Description"
+    ```
+
+### Available Commands
+
+The CLI supports various commands for managing projects, databases, data groups, and items.
+
+#### Project Commands
+
+- **Create a Project**:
+    ```bash
+    npx tsx src/index.ts create-project --name "Project Name" --description "Project Description"
+    ```
+    Creates a new project with the specified name and description.
+
+- **List All Projects**:
+    ```bash
+    npx tsx src/index.ts list-projects
+    ```
+    Lists all projects currently managed by QuikDB.
+
+- **Update a Project**:
+    ```bash
+    npx tsx src/index.ts update-project --id 1 --name "Updated Name" --description "Updated Description"
+    ```
+    Updates the name and description of an existing project.
+
+#### Database Commands
+
+- **Create a Database**:
+    ```bash
+    npx tsx src/index.ts create-database --name "Database Name" --project-id 1
+    ```
+    Creates a new database associated with a specific project.
+
+- **List All Databases**:
+    ```bash
+    npx tsx src/index.ts list-databases
+    ```
+    Lists all databases managed by QuikDB.
+
+- **Update a Database**:
+    ```bash
+    npx tsx src/index.ts update-database --id 1 --name "Updated Database Name"
+    ```
+    Updates the name of an existing database.
+
+#### Data Group Commands
+
+- **Create a Data Group**:
+    ```bash
+    npx tsx src/index.ts create-data-group --name "Data Group Name" --database-id 1 --project-id 1
+    ```
+    Creates a new data group within a specific database and project.
+
+- **List All Data Groups**:
+    ```bash
+    npx tsx src/index.ts list-data-groups
+    ```
+    Lists all data groups managed by QuikDB.
+
+- **Update a Data Group**:
+    ```bash
+    npx tsx src/index.ts update-data-group --id 1 --name "Updated Data Group Name"
+    ```
+    Updates the name of an existing data group.
+
+#### Item Commands
+
+- **Create an Item**:
+    ```bash
+    npx tsx src/index.ts create-item --key "ItemKey" --value "ItemValue"
+    ```
+    Creates a new item with the specified key and value.
+
+- **List All Items**:
+    ```bash
+    npx tsx src/index.ts list-items
+    ```
+    Lists all items currently stored.
+
+- **Update an Item**:
+    ```bash
+    npx tsx src/index.ts update-item --key "ItemKey" --value "NewItemValue"
+    ```
+    Updates the value of an existing item identified by its key.
+
+#### Batch Operations
+
+- **Batch Write Items**:
+    ```bash
+    npx tsx src/index.ts batch-write-items --items "key1=value1" "key2=value2"
+    ```
+    Adds or updates multiple items in one go.
+
+- **Batch Get Items**:
+    ```bash
+    npx tsx src/index.ts batch-get-items --keys "key1" "key2"
+    ```
+    Retrieves multiple items identified by their keys.
+
+## Conclusion
+
+This documentation provides an overview of the QuikDB actor and CLI tool, and how to interact with them for managing projects, databases, data groups, and items. Each function's description, arguments, and return values are clearly defined to help integrators understand and use QuikDB effectively. For any further customization or specific use cases, please refer to the detailed function definitions within the codebase or consult with a technical team member.
