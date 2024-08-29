@@ -4,7 +4,7 @@
 
 - **Video Title:** Frontend Functionality Demonstration
 - **Link to Video:**
-  [Watch Frontend Demo](https://#);
+  [Watch Frontend Demo](https://drive.google.com/file/d/1qBx27jCZYX9j2Nz2KX0IfJcitUMxmp39/view?usp=sharing);
 
 ## Backend Demo
 
