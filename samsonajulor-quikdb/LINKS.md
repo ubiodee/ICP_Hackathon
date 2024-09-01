@@ -3,7 +3,7 @@
 ## Repository
 
 - **Main GitHub Repository:**  
-  [QuikDb GitHub Repo](https://github.com/KSTREAM-INC/)
+  [Kstream GitHub Repo](https://github.com/KSTREAM-INC/)
 
 ## Canister Deployment
 
