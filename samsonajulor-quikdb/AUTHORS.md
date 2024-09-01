@@ -10,10 +10,10 @@ This project is made possible by the contributions of the following individuals.
 
 ## Contributors
 
-- **[Joan Nobei]**  
-  Role: [UI/UX Designer]
-  Behance: [Joan Nobei](https://www.behance.net/joannobei)  
-  Email: [nobeijoan1@gmail.com](mailto:nobeijoan1@gmail.com)
+- **[Macaulay Precious]**  
+  Role: [Solution Architect]
+  GitHub: [precious-macaulay](https://github.com/Precious-Macaulay)  
+  Email: [preciousmacaulay001@gmail.com](mailto:preciousmacaulay001@gmail.com)
 
 - **[Victory Chizoba]**  
   Role: [Fullstack Developer]  
