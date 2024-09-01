@@ -15,12 +15,23 @@ This project is made possible by the contributions of the following individuals.
   GitHub: [precious-macaulay](https://github.com/Precious-Macaulay)  
   Email: [preciousmacaulay001@gmail.com](mailto:preciousmacaulay001@gmail.com)
 
-- **[Victory Chizoba]**  
-  Role: [Fullstack Developer]  
-  GitHub: [chizobavictory](https://github.com/chizobavictory)  
-  Email: [Chizoba.victory1@gmail.com](mailto:Chizoba.victory1@gmail.com)
-
-- **[Adekunle Adewole]**  
+- **[Emmanuel Osanebi]**  
   Role: [AI and Machine Learning Engineer]  
-  GitHub: [kunle2](https://github.com/kunle2)  
-  Email: [adewoleadekunle23@yahoo.com](mailto:adewoleadekunle23@yahoo.com)
+  GitHub: [Emmanuel Osanebi](https://github.com/emms204)  
+  Email: [emmanuelosanebi1@gmail.com](mailto:emmanuelosanebi1@gmail.com)
+
+- **[Michael Agboola]**  
+  Role: [Frontend Engineer]  
+  GitHub: [Michael Agboola](https://github.com/Holarmc)  
+  Email: [agboolamicheal95@gmail.com](mailto:agboolamicheal95@gmail.com)
+
+- **[Samfield Hawb Bassey]**  
+  Role: [Backend Engineer]  
+  GitHub: [psalmfill](https://github.com/psalmfill)  
+  Email: [samfield4sure@gmail.com](mailto:samfield4sure@gmail.com)
+  
+- **[Divine Effiong]**  
+  Role: [UI/UX Designer]  
+  Email: [divineeffiong87@gmail.com](mailto:divineeffiong87@gmail.com)
+
+  
