@@ -10,7 +10,7 @@ This project is made possible by the contributions of the following individuals.
 
 ## Contributors
 
-- **[Ogban Ugot Nobei]**  
+- **[Ogban Ugot]**  
   Role: AI /Backend Engineer
   Github: [Ogban Ugot](https://github.com/ogbanugot)  
   Email: [ogbanugot@gmail.com](mailto:ogbanugot@gmail.com)
