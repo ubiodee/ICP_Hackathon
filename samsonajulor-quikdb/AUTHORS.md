@@ -3,7 +3,7 @@ This project is made possible by the contributions of the following individuals.
 
 ## Project Lead
 
-- **Samson Ajulor**  
+- **Samuel Ekuma**  
   Role: Project Lead  
   GitHub: [Samuel Ekuma](https://github.com/SammyML)  
   Email: [ekumasamuel51@gmail.com](mailto:ekumasamuel51@gmail.com)
