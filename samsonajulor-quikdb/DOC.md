@@ -59,7 +59,7 @@ This will start a development server at `http://localhost:3000`.
 
 ## Contact
 
-For any questions, suggestions, or support, please contact us at .
+For any questions, suggestions, or support, please contact us at  [ekumasamuel51@gmail.com](mailto:ekumasamuel51@gmail.com).
 
 ## Acknowledgements
 
