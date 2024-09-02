@@ -66,8 +66,13 @@ For any questions, suggestions, or support, please contact us at .
 We would like to thank the following individuals and organizations for their support:
 
 [Samuel Ekuma](https://github.com/SammyML)  
+
 [precious-macaulay](https://github.com/Precious-Macaulay)
+
 [Emmanuel Osanebi](https://github.com/emms204)  
+
 [Michael Agboola](https://github.com/Holarmc) 
+
 [psalmfill](https://github.com/psalmfill)  
+
 [Divine Effiong](mailto:divineeffiong87@gmail.com)
