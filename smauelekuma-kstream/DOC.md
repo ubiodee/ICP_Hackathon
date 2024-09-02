@@ -22,7 +22,7 @@ KSTREAM is a decentralized platform for revolutionizing online learning by empow
 **1. Clone the Repository:**
 
 ```bash
-git clone https://github.com/KSTREAM-INC/kstream.git
+git clone https://github.com/KSTREAM-INC/Kstream.git
 cd kstream
 ```
 
