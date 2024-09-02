@@ -27,7 +27,7 @@ KSTREAM aims to solve the current limitations of traditional online learning pla
 **1. Clone the Repository:**
 
 ```bash
-git clone [repository-url](https://github.com/KSTREAM-INC/kstream)
+git clone https://github.com/KSTREAM-INC/kstream
 cd kstream
 ```
 
